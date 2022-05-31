@@ -1,0 +1,65 @@
+
+
+// @import "./sass/base";
+// @import "./sass/layout/header";
+// @import "/sass/layout/city";
+// @import "./sass/layout/explorer";
+// @import "../utils/box-shadow.scss";
+
+
+
+
+/*EXPLORER*/
+
+
+h2 {
+    margin-top:32px;
+    font-size: 32px;
+}
+p {
+    font-size:16px;
+}
+button {
+  color:white;
+  font-weight: 300;
+  font-size: 24px;
+  padding: 16px 32px;
+  border:none;
+  border-radius:32px;
+  box-shadow: 2px 1px 8px -3px #000000;
+  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255,121,218, 0.9));
+  transition: transform 200ms;
+  margin-top: 16px;
+  
+ }
+ button:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+    }
+
+
+.tuto {
+    & ol {
+        display:flex;
+        flex-wrap:wrap;
+        gap: 16px;
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+    & li {
+        background-color: #f6f6f6;
+        padding:16px 32px;
+        border: 1px solid red;
+        flex-grow:1;
+        border-radius: 1px;
+        box-shadow: 2px 1px 8px -3px #000000;
+        // @include base-shadow;
+        &:hover {
+            // @include zoom;
+        }
+    }
+}
+
+
+
