@@ -1,15 +1,8 @@
 
 
-// @import "./sass/base";
-// @import "./sass/layout/header";
-// @import "/sass/layout/city";
-// @import "./sass/layout/explorer";
-// @import "../utils/box-shadow.scss";
-
-
-
 
 /*EXPLORER*/
+
 
 
 h2 {
@@ -54,12 +47,10 @@ button {
         flex-grow:1;
         border-radius: 1px;
         box-shadow: 2px 1px 8px -3px #000000;
-        // @include base-shadow;
-        &:hover {
-            // @include zoom;
+       
         }
     }
-}
+
 
 
 
