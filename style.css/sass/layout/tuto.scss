@@ -24,9 +24,10 @@
         flex-grow:1;
         border-radius: 16px;
         @include mixins.base-shadow;
-        &:hover {
+         &:hover {
             @include mixins.transform-zoom;
         }
+    
         & i.fas {
             margin-right:16px;
             color:colors.$lightgrey;
@@ -36,3 +37,4 @@
         }
     }
 }
+
