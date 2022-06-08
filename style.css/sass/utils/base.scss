@@ -1,0 +1,27 @@
+
+
+*,
+::before,
+::after {
+    box-sizing:border-box;
+}
+
+
+body {
+    margin: o;
+    font-family:"Roboto", sans-serif;
+}
+
+main {
+    padding: 0 112px;
+}
+
+h2 {
+    padding: 32px;
+    margin:0;
+}
+
+a {
+    text-decoration: none;
+    color:inherit;
+}

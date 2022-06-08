@@ -1,0 +1,24 @@
+// @import "./sass/layout/tuto";
+// @import "./sass/layout/menus";
+// @import "./sass/layout/footer";
+// @import "./sass/pages/restaurant";
+// @import "./sass/layout/header.scss";
+// @import "./sass/layout/index.scss";
+
+.city {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background-color: #f3f3f3;
+    text-align: center;
+    padding: 8px;
+    & i {
+      font-size: 24px;
+    }
+    h2 {
+      font-size: 16px;
+    }
+  }
+
+  

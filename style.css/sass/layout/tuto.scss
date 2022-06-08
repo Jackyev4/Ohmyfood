@@ -1,0 +1,38 @@
+
+.tuto {
+    counter-reset:steps;
+    margin-bottom:32px;
+    & ol {
+        display:flex;
+        gap: 16px;
+        @media (max-width: variables.$breakpoint) {
+            flex-direction: column;
+        }
+    }
+
+    & li {
+        position:relative;
+        &::before {
+            content:counter(steps)
+            color:white;
+        background-color: color.$purple;
+        width:2 * variables.$tuto-bullet-height;
+        height: 2 * variables.$tuto-bullet-height;
+        display:grid;
+        place-items:center;
+        padding:16px 32px;
+        flex-grow:1;
+        border-radius: 16px;
+        @include mixins.base-shadow;
+        &:hover {
+            @include mixins.transform-zoom;
+        }
+        & i.fas {
+            margin-right:16px;
+            color:colors.$lightgrey;
+            font-size: 24px;
+        }
+       
+        }
+    }
+}
