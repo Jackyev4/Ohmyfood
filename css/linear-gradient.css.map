@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "../utils/linear-gradient.scss"
-    ],
-    "names": [],
-    "file": "linear-gradient.css"
-}

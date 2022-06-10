@@ -2,7 +2,7 @@
     "version": 3,
     "mappings": "AAGA,AAAA,EAAE,CAAC;EACC,UAAU,EAAC,IAAI;EACf,SAAS,EAAE,IAAI;CAClB;;AACD,AAAA,CAAC,CAAC;EACE,SAAS,EAAC,IAAI;CACjB",
     "sources": [
-        "../assets/style.css/sass/layout/index.scss"
+        "../assets/sass/layout/index.scss"
     ],
     "names": [],
     "file": "index.css"
