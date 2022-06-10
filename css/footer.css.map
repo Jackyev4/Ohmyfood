@@ -2,7 +2,7 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "../style.css/sass/layout/footer.scss"
+        "../assets/style.css/sass/layout/footer.scss"
     ],
     "names": [],
     "file": "footer.css"

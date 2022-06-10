@@ -2,7 +2,7 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "../style.css/sass/abstracts/mixins.scss"
+        "../sass/layout/mixins.scss"
     ],
     "names": [],
     "file": "mixins.css"
