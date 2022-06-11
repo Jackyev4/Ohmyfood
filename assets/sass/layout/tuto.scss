@@ -1,0 +1,51 @@
+
+
+.tuto {
+    counter-reset: steps;
+    margin-bottom: 32px;
+    & ol {
+      display: flex;
+      gap: 32px
+      // @media (max-width: variables.$breakpoint) {
+      //   flex-direction: column;
+      // }
+    }
+    & li {
+      position: relative;
+      display: flex;
+      align-items: center;
+      &::before {
+        content: counter(steps);
+        counter-increment: steps;
+        color: white;
+        // background-color: colors.$purple;
+        // width: 2 * variables.$tuto-bullet-height;
+        // height: 2 * variables.$tuto-bullet-height;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        // left: -1 * variables.$tuto-bullet-height;
+        transform: translateY(-50%);
+      }
+      list-style-type: none;
+      background-color: #f6f6f6;
+      padding: 24px 32px;
+      flex-grow: 1;
+      border-radius: 16px;
+      // @include mixins.box-shadow;
+      &:hover {
+        // @include mixins.transform-zoom;
+        // background-color: lighten(colors.$purple, 35%);
+        i::before {
+          color:$purple;
+        }
+      }
+      & i.fas {
+        margin-right: 16px;
+        color: $lightgrey;
+        font-size: 24px;
+      }
+    }
+  }
