@@ -30,7 +30,7 @@
       display: grid;
       place-items: center;
       right: 16px;
-      // top: 16px;
+      top: 16px;
     }
   }
 
@@ -40,11 +40,7 @@
       border-radius: 16px 16px 0 0;
       background-size: cover;
     }
-    @for $i from 1 through 4 {
-      &__image-#{$i} {
-      background-image: url("../../assets/restaurants/img-($i).jpg");
-      }
-    }
+    
 
     &__description {
       position: relative;
@@ -75,6 +71,7 @@
         transition: all 200ms ease-in-out;
         // @include mixins
       }
+    }
         
       h3,
       p {
@@ -82,5 +79,4 @@
         }
       }
     }
-}
 }
