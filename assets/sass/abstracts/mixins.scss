@@ -8,7 +8,7 @@
 }
 
 @mixin base-shadow {
-    box-shadow: 2px 1px 8 px -3px #000000;
+    box-shadow: 2px 1px 8 px -3px $lightgrey;
 }
 
 @mixin transform-zoom {
@@ -18,23 +18,63 @@
     transform: scale(1.02);
 }
 
-@mixin heart($opacity:1,$font-weight:400,$color:inherit) {
+@mixin font-awesome($font-weight: 400) {
     display: inline-block;
-    font-style:normal;
-    font-variant:normal;
+    position: absolute;
+    font-style: normal;
+    font-variant: normal;
     text-rendering: auto;
-    -webkit-font-smoothing:antialiased;
-    font-family:"Font Awesome 5 Free";
-    font-weight:$font-weight;
-    content:"\f004";
-    font-size:32px;
-    position:absolute;
-    right:16px;
-    top:50%;
-    transform:translateY(-50%);
-    color:$color;
-    background-clip: text;
-    opacity:$opacity;
-    transition: all 200ms ease-in-out;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: $font-weight;
+  }
 
-}
+
+@mixin heart($opacity: 1, $font-weight: 400, $color: inherit) {
+    @include font-awesome($font-weight);
+    content: "\f004";
+    font-size: 32px;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $color;
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: $opacity;
+    transition: all 200ms ease-in-out;
+  }
+  
+  @mixin heart-animated {
+    position: relative;
+    background-color: white;
+    border-radius: 0 0 16px 16px;
+    &::before {
+      @include heart;
+    }
+    &::after {
+      @include heart($opacity: 0, $font-weight: 900, $color: transparent);
+      @include gradient(1);
+    }
+    &:hover::after {
+      opacity: 1;
+      transform: translateY(-50%) scale(1.1);
+    }
+  }
+  
+  @mixin base-button {
+    color: white;
+    font-weight: 300;
+    font-size: 24px;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 32px;
+    transition: transform 200ms;
+    margin-top: 16px;
+    cursor: pointer;
+    @include box-shadow;
+    @include gradient;
+    &:hover {
+      transform: scale(1.02);
+      opacity: 0.9;
+    }
+  }

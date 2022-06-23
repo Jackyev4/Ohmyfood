@@ -1,4 +1,4 @@
-button {
+.btn-primary {
   color: white;
   font-weight: 300;
   font-size: 24px;
@@ -12,18 +12,18 @@ button {
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   font-size: 16px;
 }
-
-button:hover {
+.btn-primary .button {
   transform: scale(1.02);
   opacity: 0.9;
 }
 
 header {
-  background-color: #f0efef;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
   width: 100%;
   min-width: 320px;
   padding: 21px 0;
+}
+header .title {
+  text-align: center;
 }
 header .logo {
   display: flex;
@@ -32,7 +32,7 @@ header .logo {
   position: relative;
 }
 header .logo img {
-  max-width: 15px;
+  min-width: 15px;
 }
 
 h2 {
@@ -44,6 +44,22 @@ p {
   font-size: 16px;
 }
 
+.city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 8px;
+}
+.city i {
+  font-size: 24px;
+}
+.city h2 {
+  font-size: 16px;
+}
+
 /*EXPLORER*/
 .explorer {
   text-align: center;
@@ -51,7 +67,6 @@ p {
 }
 .explorer h2 {
   font-size: 32px;
-  font-size: 24px;
   margin: 16px;
 }
 .explorer p {
@@ -91,42 +106,107 @@ p {
     transform: rotate(360deg);
   }
 }
-.menus {
-  background-color: #f6f6f6;
-  margin-bottom: 32px;
-}
-.menus .menus__cards {
+.menus__cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
+  grid-template-columns: repeat(1, 1fr);
 }
-@media (max-width: 1000px) {
-  .menus .menus__cards {
-    grid-template-columns: repeat(1, 1fr);
+
+@media only screen and (min-width: 600px) {
+  #homepage .restaurants {
+    margin-bottom: 10px;
   }
-}
-.menus .menus__cards .new {
-  position: relative;
-}
-.menus .menus__cards .new::before {
-  content: "Nouveau";
-  position: absolute;
-  height: 32px;
-  width: 80px;
-  background-color: #99e2d0;
-  color: #1b6150;
-  display: grid;
-  place-items: center;
-  right: 16px;
-  top: 16px;
-}
-.menus .menus__cards img {
-  width: 100%;
-  height: 400px;
-  border-radius: 16px 16px 0 0;
-  background-size: cover;
-  background-position: center;
-  object-fit: cover;
+  #homepage .menus {
+    margin-bottom: 32px;
+  }
+  #homepage .menus__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 90%;
+    margin: auto;
+  }
+  #homepage .menus__cards .new {
+    position: relative;
+  }
+  #homepage .menus__cards .new::before {
+    content: "Nouveau";
+    position: absolute;
+    height: 32px;
+    width: 80px;
+    background-color: #99e2d0;
+    color: #1b6150;
+    display: grid;
+    place-items: center;
+    right: 16px;
+    top: 16px;
+  }
+  #homepage .menus__cards .card img {
+    width: 100%;
+    height: 400px;
+    border-radius: 16px 16px 0 0;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+  }
+  #homepage .menus__cards .card__description {
+    background-color: #f6f6f6;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 2px 1px 8px -3px #7e7e7e;
+  }
+  #homepage .menus__cards .description {
+    position: relative;
+    background-color: white;
+    border-radius: 0 0 16px 16px;
+  }
+  #homepage .menus__cards .description::before {
+    display: inline-block;
+    position: absolute;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    content: "\f004";
+    font-size: 32px;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: inherit;
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 1;
+    transition: all 200ms ease-in-out;
+  }
+  #homepage .menus__cards .description::after {
+    display: inline-block;
+    position: absolute;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f004";
+    font-size: 32px;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+    background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+  }
+  #homepage .menus__cards .description:hover::after {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+  }
+  #homepage .menus__cards .description h3,
+#homepage .menus__cards .description p {
+    padding: 5px;
+  }
 }
 
 .tuto {
@@ -137,13 +217,9 @@ p {
 .tuto ol {
   display: flex;
   gap: 32px;
+  margin-right: 70px;
 }
 
-@media (max-width: 1000px) {
-  .tuto ol {
-    flex-direction: column;
-  }
-}
 .tuto li {
   position: relative;
   display: flex;
@@ -212,9 +288,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-main {
-  padding: 0 112px;
-}
 @media (max-width: 320px) {
   main {
     padding: 0 16px;

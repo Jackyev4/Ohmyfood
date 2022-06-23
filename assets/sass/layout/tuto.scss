@@ -1,15 +1,17 @@
 .tuto {
   counter-reset: steps;
   margin-bottom: 32px;
+  
 }
 .tuto ol {
   display: flex;
   gap: 32px;
-}
-@media (max-width: 1000px) {
-  .tuto ol {
-    flex-direction: column;
-  }
+  margin-right: 70px;
+  // @media only screen and (min-width: 10px) {
+  //   flex-direction: column;
+  // }
+    
+ 
 }
 .tuto li {
   position: relative;
@@ -21,6 +23,7 @@
   flex-grow: 1;
   border-radius: 16px;
   box-shadow: 2px 1px 8px -3px #7e7e7e;
+  
 }
 .tuto li::before {
   content: counter(steps);
@@ -36,17 +39,23 @@
   top: 50%;
   left: -16px;
   transform: translateY(-50%);
+  
 }
 .tuto li:hover {
   transform: scale(1.02);
   background-color: #f2eafb;
+  
 }
 .tuto li:hover i::before {
   color: #9356dc;
+  
 }
 .tuto li i.fas {
   margin-right: 16px;
   color: #7e7e7e;
   font-size: 24px;
+  
 }
+
+
 
