@@ -1,12 +1,9 @@
-.menus__cards {
-  display:grid;
-  grid-template-columns: repeat(1, 1fr)
-  
-}
+
+
 
 #homepage {
 
-@media only screen and (min-width: 600px) {
+  
 .restaurants {
   margin-bottom: 10px;
   
@@ -15,14 +12,18 @@
     margin-bottom: 32px;
     
   }
-
+  @media screen and (min-width:500px) {
+    grid-template-columns: repeat(1, 1fr);
+  
     .menus__cards {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 30px;
       width: 90%;
       margin:auto;
-     
+    }
+  }
+  
       .new {
         position: relative;
       }
@@ -49,22 +50,23 @@
         background-position: center;
         object-fit:cover;
       }
-      
     }
+    
     .card__description {
       background-color: #f6f6f6;
       border-radius: 0 0 16px 16px;
       box-shadow: 2px 1px 8px -3px #7e7e7e;
     }
-    .description {
+    .card__description {
       @include heart-animated;
       h3,
       p {
         padding: 5px;
       
+      
     }
+  
   }
-}
 
-}
+
 }

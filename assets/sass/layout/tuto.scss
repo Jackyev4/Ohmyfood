@@ -1,3 +1,5 @@
+@media screen and (min-width:990px) {
+  
 .tuto {
   counter-reset: steps;
   margin-bottom: 32px;
@@ -7,9 +9,8 @@
   display: flex;
   gap: 32px;
   margin-right: 70px;
-  // @media only screen and (min-width: 10px) {
-  //   flex-direction: column;
-  // }
+
+  }
     
  
 }
@@ -17,7 +18,6 @@
   position: relative;
   display: flex;
   align-items: center;
-  list-style-type: none;
   background-color: #f6f6f6;
   padding: 24px 32px;
   flex-grow: 1;
@@ -25,6 +25,7 @@
   box-shadow: 2px 1px 8px -3px #7e7e7e;
   
 }
+
 .tuto li::before {
   content: counter(steps);
   counter-increment: steps;
@@ -38,8 +39,8 @@
   position: absolute;
   top: 50%;
   left: -16px;
-  transform: translateY(-50%);
-  
+  transform: translateY(-50%); 
+
 }
 .tuto li:hover {
   transform: scale(1.02);
@@ -51,11 +52,10 @@
   
 }
 .tuto li i.fas {
+  font-weight: bold;
   margin-right: 16px;
   color: #7e7e7e;
   font-size: 24px;
   
 }
-
-
 
