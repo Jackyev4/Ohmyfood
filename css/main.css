@@ -22,9 +22,6 @@ header {
   min-width: 320px;
   padding: 21px 0;
 }
-header .title {
-  text-align: center;
-}
 header .logo {
   display: flex;
   justify-content: center;
@@ -32,16 +29,7 @@ header .logo {
   position: relative;
 }
 header .logo img {
-  min-width: 15px;
-}
-
-h2 {
-  margin-top: 32px;
-  font-size: 32px;
-}
-
-p {
-  font-size: 16px;
+  height: 30px;
 }
 
 .city {
@@ -241,9 +229,10 @@ footer {
   padding: 16px 32px;
   color: white;
 }
-footer h2 {
-  font-family: "Shrikhand", "sans-serif";
-  font-weight: 500;
+footer .footer-title {
+  height: 50px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
   padding: 16px 0;
 }
 footer p {
@@ -259,12 +248,6 @@ footer p {
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
-}
-
-@media (max-width: 320px) {
-  main {
-    padding: 0 16px;
-  }
 }
 
 h1,
