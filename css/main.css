@@ -54,45 +54,31 @@ header .logo img {
   margin: 32px;
 }
 .explorer h2 {
-  font-size: 32px;
+  font-size: 26px;
   margin: 16px;
 }
 .explorer p {
   font-size: 16px;
 }
 
-@keyframes disappear {
-  to {
-    transform: scale(0);
-  }
+.menus {
+  margin-bottom: 32px;
+  background-color: #f3f3f3;
 }
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-#homepage .restaurants {
+.menus .restaurants {
   margin-bottom: 10px;
 }
-#homepage .menus {
-  margin-bottom: 32px;
+.menus .menus__cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+  width: 90%;
+  margin: auto;
 }
-@media screen and (min-width: 500px) {
-  #homepage {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  #homepage .menus__cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    width: 90%;
-    margin: auto;
-  }
-}
-#homepage .new {
+.menus .menus__cards .card.new {
   position: relative;
 }
-#homepage .new::before {
+.menus .menus__cards .card.new::before {
   content: "Nouveau";
   position: absolute;
   height: 32px;
@@ -104,25 +90,22 @@ header .logo img {
   right: 16px;
   top: 16px;
 }
-#homepage .card img {
+.menus .menus__cards .card .card__img {
   width: 100%;
-  height: 400px;
+  height: 230px;
   border-radius: 16px 16px 0 0;
   background-size: cover;
   background-position: center;
   object-fit: cover;
 }
-#homepage .card__description {
-  background-color: #f6f6f6;
+.menus .menus__cards .card .card__description {
   border-radius: 0 0 16px 16px;
   box-shadow: 2px 1px 8px -3px #7e7e7e;
-}
-#homepage .card__description {
   position: relative;
   background-color: white;
   border-radius: 0 0 16px 16px;
 }
-#homepage .card__description::before {
+.menus .menus__cards .card .card__description::before {
   display: inline-block;
   position: absolute;
   font-style: normal;
@@ -141,7 +124,7 @@ header .logo img {
   opacity: 1;
   transition: all 200ms ease-in-out;
 }
-#homepage .card__description::after {
+.menus .menus__cards .card .card__description::after {
   display: inline-block;
   position: absolute;
   font-style: normal;
@@ -161,15 +144,20 @@ header .logo img {
   transition: all 200ms ease-in-out;
   background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
 }
-#homepage .card__description:hover::after {
+.menus .menus__cards .card .card__description:hover::after {
   opacity: 1;
   transform: translateY(-50%) scale(1.1);
 }
-#homepage .card__description h3,
-#homepage .card__description p {
+.menus .menus__cards .card .card__description h3,
+.menus .menus__cards .card .card__description p {
   padding: 5px;
 }
 
+@media screen and (min-width: 500px) {
+  .menus .menus__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media screen and (min-width: 990px) {
   .tuto {
     counter-reset: steps;
@@ -182,14 +170,17 @@ header .logo img {
   }
 }
 .tuto li {
+  width: 310px;
+  margin-bottom: inherit;
   position: relative;
   display: flex;
   align-items: center;
   background-color: #f6f6f6;
-  padding: 24px 32px;
+  padding: 18px 32px;
   flex-grow: 1;
   border-radius: 16px;
   box-shadow: 2px 1px 8px -3px #7e7e7e;
+  font-weight: bold;
 }
 
 .tuto li::before {
@@ -230,13 +221,18 @@ footer {
   color: white;
 }
 footer .footer-title {
-  height: 50px;
-  font-family: "Raleway", sans-serif;
+  height: 45px;
+  font-family: "Shrikhand";
   font-weight: bold;
   padding: 16px 0;
+  margin-bottom: 10px;
 }
 footer p {
-  padding: 3.2px;
+  padding: 4px;
+  margin-left: 5px;
+}
+footer .fas {
+  margin-right: 8px;
 }
 
 *,
@@ -259,6 +255,11 @@ h6,
 p {
   padding: 0;
   margin: 0;
+}
+
+.fonctionnement,
+.restaurants {
+  margin-left: 20px;
 }
 
 a {

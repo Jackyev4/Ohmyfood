@@ -1,72 +1,63 @@
+.menus {
+  margin-bottom: 32px;
+  background-color: #f3f3f3;
 
-
-
-#homepage {
-
-  
-.restaurants {
-  margin-bottom: 10px;
-  
-}
-  .menus {
-    margin-bottom: 32px;
-    
+  .restaurants {
+    margin-bottom: 10px;
   }
-  @media screen and (min-width:500px) {
+
+  .menus__cards {
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
-  
-    .menus__cards {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-      width: 90%;
-      margin:auto;
-    }
-  }
-  
-      .new {
-        position: relative;
-      }
-      
-     
-      .new::before {
-        content: "Nouveau";
-        position: absolute;
-        height: 32px;
-        width: 80px;
-        background-color: $color-tertiary;
-        color: darken($color-tertiary, 50%);
-        display: grid;
-        place-items: center;
-        right: 16px;
-        top: 16px;
-      }
+    gap: 30px;
+    width: 90%;
+    margin: auto;
+
     .card {
-      img {
+      &.new {
+        position: relative;
+
+        &::before {
+          content: "Nouveau";
+          position: absolute;
+          height: 32px;
+          width: 80px;
+          background-color: $color-tertiary;
+          color: darken($color-tertiary, 50%);
+          display: grid;
+          place-items: center;
+          right: 16px;
+          top: 16px;
+        }
+      }
+
+      .card__img {
         width: 100%;
         height: 230px;
         border-radius: 16px 16px 0 0;
         background-size: cover;
         background-position: center;
-        object-fit:cover;
+        object-fit: cover;
+      }
+
+      .card__description {
+        border-radius: 0 0 16px 16px;
+        box-shadow: 2px 1px 8px -3px #7e7e7e;
+        @include heart-animated;
+
+        h3,
+        p {
+          padding: 5px;
+        }
       }
     }
-    
-    .card__description {
-      background-color: #f6f6f6;
-      border-radius: 0 0 16px 16px;
-      box-shadow: 2px 1px 8px -3px #7e7e7e;
-    }
-    .card__description {
-      @include heart-animated;
-      h3,
-      p {
-        padding: 5px;
-      
-      
-    }
-  
   }
+}
 
-
+@media screen and (min-width: 500px) {
+  .menus {
+    .menus__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }

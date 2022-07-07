@@ -9,21 +9,24 @@
   display: flex;
   gap: 32px;
   margin-right: 70px;
+  
 
   }
     
  
 }
 .tuto li {
+  width: 310px;
+  margin-bottom: inherit;
   position: relative;
   display: flex;
   align-items: center;
   background-color: #f6f6f6;
-  padding: 24px 32px;
+  padding: 18px 32px;
   flex-grow: 1;
   border-radius: 16px;
   box-shadow: 2px 1px 8px -3px #7e7e7e;
-  
+  font-weight: bold;
 }
 
 .tuto li::before {
