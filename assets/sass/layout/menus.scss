@@ -1,9 +1,10 @@
 .menus {
-  margin-bottom: 32px;
   background-color: #f3f3f3;
+  padding-bottom: 40px;
 
   .restaurants {
     margin-bottom: 10px;
+    padding-top: 35px;
   }
 
   .menus__cards {
@@ -48,6 +49,7 @@
         h3,
         p {
           padding: 5px;
+          margin-top: -5px;
         }
       }
     }

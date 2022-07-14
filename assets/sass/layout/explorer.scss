@@ -1,14 +1,16 @@
 /*EXPLORER*/
 
 .explorer {
+  background-color: #f3f3f3;
     text-align: center;
-    margin: 32px;
+    padding-top: 35px;
+ 
     & h2 {
       font-size: 26px;
-      margin: 16px;
     }
     & p {
       font-size: 16px;
+      margin-top: 10px;
     }
     
   }

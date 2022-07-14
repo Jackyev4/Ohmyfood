@@ -1,22 +1,22 @@
-@media screen and (min-width:990px) {
-  
 .tuto {
   counter-reset: steps;
-  margin-bottom: 32px;
   
 }
+
+@media screen and (min-width:768px) {
+  
+
 .tuto ol {
   display: flex;
   gap: 32px;
   margin-right: 70px;
   
-
   }
     
  
 }
 .tuto li {
-  width: 310px;
+  width: 95%;
   margin-bottom: inherit;
   position: relative;
   display: flex;
