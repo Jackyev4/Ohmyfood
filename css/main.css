@@ -272,8 +272,21 @@ a {
   color: inherit;
 }
 
-body {
-  background-color: #f6f6f6;
+@media screen and (min-width: 768px) {
+  body {
+    background-color: #f6f6f6;
+  }
+  body title {
+    text-align: center;
+    height: 25px;
+    font-family: "Shrikhand";
+    font-weight: bold;
+    padding: 16px 0;
+    margin-bottom: 10px;
+  }
+  body .btn-primary {
+    margin-left: auto;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,4 +1,40 @@
+@media screen and (min-width:768px) {
 body {
     background-color:$lightergrey;
-  }
+  
+
+title {
+    text-align: center;
+    height: 25px;
+    font-family: "Shrikhand";
+  font-weight: bold;
+  padding: 16px 0;
+  margin-bottom: 10px;
+ 
+}
+  
+  
+.btn-primary {
+    margin-left:auto;
+     @mixin base-button {
+        color: white;
+        font-weight: 300;
+        font-size: 24px;
+        padding: 16px 32px;
+        border: none;
+        border-radius: 32px;
+        transition: transform 200ms;
+        margin-top: 16px;
+        cursor: pointer;
+        @include box-shadow;
+        
+        @include gradient;
+        &:hover {
+          transform: scale(1.02);
+          opacity: 0.9;
+        }
+    }
+}
+}
+}
 
