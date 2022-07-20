@@ -1,40 +1,78 @@
-@media screen and (min-width:768px) {
+
 body {
     background-color:$lightergrey;
-  
-
-title {
-    text-align: center;
-    height: 25px;
-    font-family: "Shrikhand";
-  font-weight: bold;
-  padding: 16px 0;
-  margin-bottom: 10px;
- 
 }
+    header {
+        &:hover::before {
+          @include transform-zoom;
+        }
+    }
+    .hight img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+.title {
+        margin-top: -32px;
+        h2 {
+          font-family: "Shrikhand", "cursive";
+          padding: 32px 16px;
+          @include heart-animated;
+          border-radius: 32px 32px 0 0;
+          background-color:$lightergrey;
+        }
+      }
+ 
+
   
   
 .btn-primary {
     margin-left:auto;
-     @mixin base-button {
-        color: white;
-        font-weight: 300;
-        font-size: 24px;
-        padding: 16px 32px;
-        border: none;
-        border-radius: 32px;
-        transition: transform 200ms;
-        margin-top: 16px;
-        cursor: pointer;
-        @include box-shadow;
-        
-        @include gradient;
-        &:hover {
-          transform: scale(1.02);
-          opacity: 0.9;
-        }
     }
-}
-}
-}
+    
+    .menus__resto {
+        padding: 0 16px;
+      }
+      .menus {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+        
+        h3 {
+          font-weight: 400;
+          position: relative;
+          margin-bottom: 16px;
+          height: 8px;
+        }
+        
+           .menu-item__price {
+              margin-left: auto;
+              font-weight: 900;
+              padding: 16px;
+              display: flex;
+              align-items: flex-end;
+            }
+            .menu-item__description {
+              padding: 16px;
+            }
+            .menu-item__check {
+              display: grid;
+              place-items: center;
+              background: white;
+              border-radius: 0 16px 16px 0;
+            
+              
+            }
+        }
+    
+      .order {
+        height: 30px;
+        display: grid;
+        place-items: center;
+        
+      }
+
+   
 

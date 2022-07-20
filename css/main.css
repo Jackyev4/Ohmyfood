@@ -272,21 +272,117 @@ a {
   color: inherit;
 }
 
-@media screen and (min-width: 768px) {
-  body {
-    background-color: #f6f6f6;
-  }
-  body title {
-    text-align: center;
-    height: 25px;
-    font-family: "Shrikhand";
-    font-weight: bold;
-    padding: 16px 0;
-    margin-bottom: 10px;
-  }
-  body .btn-primary {
-    margin-left: auto;
-  }
+body {
+  background-color: #f6f6f6;
+}
+
+header:hover::before {
+  transform: scale(1.02);
+}
+
+.hight img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.title {
+  margin-top: -32px;
+}
+.title h2 {
+  font-family: "Shrikhand", "cursive";
+  padding: 32px 16px;
+  position: relative;
+  background-color: white;
+  border-radius: 0 0 16px 16px;
+  border-radius: 32px 32px 0 0;
+  background-color: #f6f6f6;
+}
+.title h2::before {
+  display: inline-block;
+  position: absolute;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\f004";
+  font-size: 32px;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: inherit;
+  -webkit-background-clip: text;
+  opacity: 1;
+  transition: all 200ms ease-in-out;
+}
+.title h2::after {
+  display: inline-block;
+  position: absolute;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f004";
+  font-size: 32px;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: transparent;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+}
+.title h2:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.btn-primary {
+  margin-left: auto;
+}
+
+.menus__resto {
+  padding: 0 16px;
+}
+
+.menus {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+}
+.menus h3 {
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 16px;
+  height: 8px;
+}
+.menus .menu-item__price {
+  margin-left: auto;
+  font-weight: 900;
+  padding: 16px;
+  display: flex;
+  align-items: flex-end;
+}
+.menus .menu-item__description {
+  padding: 16px;
+}
+.menus .menu-item__check {
+  display: grid;
+  place-items: center;
+  background: white;
+  border-radius: 0 16px 16px 0;
+}
+
+.order {
+  height: 30px;
+  display: grid;
+  place-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */
