@@ -69,11 +69,13 @@
     transition: transform 200ms;
     margin-top: 16px;
     cursor: pointer;
-    @include box-shadow;
-    @include gradient;
+    // @include box-shadow;
+    // @include gradient;
     &:hover {
       transform: scale(1.02);
       opacity: 0.9;
     }
   }
  
+  
+  
