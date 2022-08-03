@@ -1,5 +1,6 @@
 //sass --watch assets/main.scss css/main.css
 
+@import "./sass/utils/normalize.scss";
 @import "./sass/abstracts/mixins.scss";
 @import "./sass/abstracts/variables.scss";
 @import "./sass/components/buttons.scss";

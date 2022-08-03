@@ -51,9 +51,9 @@
         &::after {
           content: "";
           position: absolute;
-          width: 48px;
-          top: 24px;
           left: 0;
+          top: 24px;
+          width: 48px;
           height: 4px;
           background-color: $color-tertiary;
        }
@@ -64,6 +64,14 @@
       padding: 20px;
     }
      .menu__container {
+      $numbercontainers:4;
+        @for $i from  $numbercontainers through 1{
+          &:nth-child(#{$i}) {
+            animation-delay: 100ms * $i;
+          }
+         
+        }
+
        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
        border-radius: 16px;
        display: flex;
@@ -72,6 +80,10 @@
       margin-top: 20px;
       margin-left: 20px;
       margin-right:20px;
+      animation: appear 1s;
+      animation-fill-mode:both;
+       
+        
     }
      .menu__container:hover .menu__check {
        margin-right: 0;
@@ -129,18 +141,16 @@
     
    
     
-    .menu__price{
+    .menu__price {
       margin-left: 8px;
     }
     
-    
-    
-    
-        .btn-primary {
-          margin-bottom: 55px;
-          margin-top: 45px;
-      }
-         
+    .menu__order {
+      margin-bottom: 55px;
+      margin-top: 45px;
+      text-align: center;
+    }
+     
       
     
           
