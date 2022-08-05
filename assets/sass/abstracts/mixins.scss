@@ -44,7 +44,9 @@
   }
   
   @mixin heart-animated {
+   
     position: relative;
+    bottom:25px;
     background-color: white;
     border-radius: 0 0 16px 16px;
     &::before {

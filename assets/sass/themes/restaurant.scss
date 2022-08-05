@@ -24,18 +24,26 @@
         
       }
 
+      
 .title {
   
-        margin-top: -32px;
-        h2 {
-          font-family: "Shrikhand", "cursive";
-          padding: 32px 16px;
-          @include heart-animated;
-          border-radius: 32px 32px 0 0;
-          background-color:$lightergrey;
-        }
+  position: relative;
+  bottom:60px;
+  h2 {
+    font-family: "Shrikhand", "cursive";
+    padding: 32px 16px;
+    border-radius: 32px 32px 0 0;
+    background-color:$lightergrey;
+  }
+  
 }
-    
+.card__description-heart {
+  @include heart-animated;
+  position: relative;
+  bottom: 105px;
+
+ }
+
     .menu {
        width: 480px;
        max-width: 480px;
