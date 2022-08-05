@@ -43,16 +43,25 @@
       }
 
       .card__description {
+        
         border-radius: 0 0 16px 16px;
         box-shadow: 2px 1px 8px -3px #7e7e7e;
         @include heart-animated;
+      
+       
+        
 
         h3,
         p {
           padding: 5px;
           margin-top: -5px;
           font-weight: bold;
+
         }
+        // .card__description-heart {
+         
+          //   @include heart-animated;
+          // }
       }
     }
   }
