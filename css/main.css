@@ -428,7 +428,6 @@ header {
 .menus .menus__cards .card .card__description p {
   padding: 5px;
   margin-top: -5px;
-  font-weight: bold;
 }
 .menus .menus__cards .card .card__description .card__description-heart {
   position: relative;
