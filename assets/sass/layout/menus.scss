@@ -1,7 +1,6 @@
 .menus {
   background-color: #f3f3f3;
   padding-bottom: 40px;
-  
 
   .restaurants {
     margin-bottom: 10px;
@@ -43,27 +42,21 @@
       }
 
       .card__description {
-        
         border-radius: 0 0 16px 16px;
         box-shadow: 2px 1px 8px -3px #7e7e7e;
-       
-      
-       
-         h3,
+
+        h3,
         p {
           padding: 5px;
           margin-top: -5px;
-        
         }
-        
+
         .card__description-heart {
           @include heart-animated;
-            
-          }
         }
-     
+      }
     }
-  }
+}
 }
 
 @media screen and (min-width: 500px) {
