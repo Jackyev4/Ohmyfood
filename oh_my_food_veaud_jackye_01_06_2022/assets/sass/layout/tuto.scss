@@ -1,0 +1,64 @@
+.tuto {
+  counter-reset: steps;
+  
+}
+
+@media screen and (min-width:768px) {
+  
+
+.tuto ol {
+  display: flex;
+  gap: 32px;
+  margin-right: 70px;
+  
+  }
+    
+ 
+}
+.tuto li {
+  width: 95%;
+  margin-bottom: inherit;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+  padding: 18px 32px;
+  flex-grow: 1;
+  border-radius: 16px;
+  box-shadow: 2px 1px 8px -3px #7e7e7e;
+  font-weight: bold;
+}
+
+.tuto li::before {
+  content: counter(steps);
+  counter-increment: steps;
+  color: white;
+  background-color: #9356dc;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: -16px;
+  transform: translateY(-50%); 
+
+}
+.tuto li:hover {
+  transform: scale(1.02);
+  background-color: #f2eafb;
+  
+}
+.tuto li:hover i::before {
+  color: #9356dc;
+  
+}
+.tuto li i.fas {
+  font-weight: bold;
+  margin-right: 16px;
+  color: #7e7e7e;
+  font-size: 24px;
+  
+}
+

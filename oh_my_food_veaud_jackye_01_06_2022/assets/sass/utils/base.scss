@@ -1,0 +1,56 @@
+
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+
+  img {
+      height: 30px;
+      
+     
+  }
+  
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6f6f6;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  margin-left:auto;
+  margin-right:auto;
+  max-width: 1440px;
+}
+
+main {
+  background-color: $lightergrey;
+}
+
+h1,
+h2, 
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+.fonctionnement,
+.restaurants {
+margin-left: 20px;
+padding-top: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

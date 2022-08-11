@@ -1,0 +1,159 @@
+header {
+  position: relative;
+
+  .arrow {
+    position: absolute;
+    top: 35%;
+    left: 0%;
+    padding-left: 20px;
+  }
+}
+
+.hight img {
+  display: block;
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.title {
+  position: relative;
+  bottom: 60px;
+  h2 {
+    font-family: "Shrikhand", "cursive";
+    padding: 32px 16px;
+    border-radius: 32px 32px 0 0;
+    background-color: $lightergrey;
+  }
+}
+.card__description-heart {
+  @include heart-animated;
+  position: relative;
+  bottom: 105px;
+}
+
+.menu {
+  width: 480px;
+  max-width: 480px;
+  margin: auto;
+  position: relative;
+  display: contents;
+  background-color: #f6f6f6;
+
+  h3 {
+    font-weight: 400;
+    position: relative;
+    margin-bottom: 16px;
+    color: $lightgrey;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 24px;
+      width: 48px;
+      height: 4px;
+      background-color: $color-tertiary;
+    }
+  }
+}
+.menu__family {
+  margin-top: 5px;
+  padding: 20px;
+}
+
+#menu_starter {
+  @include loading (300ms)
+    }
+ 
+
+#menu_dish {
+  @include loading (600ms)
+}
+
+#menu_dessert {
+  @include loading (900ms)
+}
+.menu__container {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 16px;
+  display: flex;
+  overflow: hidden;
+  max-width: 100%;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  animation: appear 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.menu__container:hover .menu__check {
+  margin-right: 0;
+}
+.menu__container:hover i {
+  transform: rotate(360deg);
+  transition-duration: 0.5s;
+}
+.menu__description {
+  width: 100%;
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+}
+.menu__text {
+  width: 100%;
+  margin-left: 16px;
+  max-width: 100%;
+  overflow: hidden;
+  margin-bottom: 17px;
+}
+.menu__price {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 16px;
+  margin-right: 16px;
+  max-width: 100%;
+}
+.menu__check {
+  width: 112px;
+  background: $color-tertiary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -112px;
+  transition-duration: 0.5s;
+}
+.menu__check > i {
+  color: $color-tertiary;
+  padding: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.menu__text > * {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.menu__price {
+  margin-left: 8px;
+}
+
+.menu__order {
+  margin-bottom: 55px;
+  margin-top: 45px;
+  text-align: center;
+}
